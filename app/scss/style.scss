@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?ocz820');
+    src:  url('../fonts/icomoon.eot?ocz820#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?ocz820') format('truetype'),
+      url('../fonts/icomoon.woff?ocz820') format('woff'),
+      url('../fonts/icomoon.svg?ocz820#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-edit:before {
+    content: "\e900";
+  }
+  .icon-messenger:before {
+    content: "\e901";
+    color: #00b2ff;
+  }
+  .icon-envelope-o:before {
+    content: "\f003";
+  }
+  .icon-whatsapp:before {
+    content: "\ea93";
+  }
+  
+$primaryBgColor: #d72720;
+$footerBgColor: #e73332;
+$submitColor: #003349;
+
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+body{
+    outline: 1px solid red;
+    margin: auto;
+    padding: 0;
+    font: 15px Helvetica,Arial,sans-serif;
+    max-width: 1920px;
+    min-width: 320px;
+    color: #7a7a7a;
+}
+
+
+//header
+.header__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.header__log {
+    max-width: 300px;
+    max-height: 63.59px;
+}
+.header__inner {
+    display: flex;
+    gap: 40px;
+}
+.header__left {
+    display: flex;
+    gap: 10px;
+    align-items:baseline;
+    position: relative;
+
+    div {
+        width: 48px;
+        height: 48px;
+        background-color: $submitColor;
+        border-radius: 50%;
+        padding: 11px;
+        transition: all .3s;
+        cursor: pointer;
+        &:hover {
+            background-color: $primaryBgColor;
+        }
+    }
+    div:nth-child(1)::before, 
+    div:nth-child(2)::before, 
+    div:nth-child(3)::before, 
+    div:nth-child(4)::before {
+        content: "\f003";
+        position: absolute;
+        font-family: 'icomoon';
+        font-size: 25px;
+        color: #fff;
+    }
+    div:nth-child(3)::before{
+        content: "\e900";
+
+    }
+    div:nth-child(2)::before{
+        content: "\e901";
+    }
+    div:nth-child(1)::before{
+        content: "\ea93";
+    }
+}
+.header__right {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: #6f6f6f;
+    border-left: 3px solid $primaryBgColor;
+    padding: 0 0 13px 11px;
+}
+.header__link {
+    color: #000;
+    font-weight: 700;
+    font-size: 33px;
+    letter-spacing: 1px;
+    transition: all .3s;
+    &:hover {
+        color: $primaryBgColor;
+    }
+}
