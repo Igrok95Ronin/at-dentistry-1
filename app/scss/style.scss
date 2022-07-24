@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icomoon';
-    src:  url('../fonts/icomoon.eot?5ys1s');
-    src:  url('../fonts/icomoon.eot?5ys1s#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.ttf?5ys1s') format('truetype'),
-      url('../fonts/icomoon.woff?5ys1s') format('woff'),
-      url('../fonts/icomoon.svg?5ys1s#icomoon') format('svg');
+    src:  url('../fonts/icomoon.eot?d0tgha');
+    src:  url('../fonts/icomoon.eot?d0tgha#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?d0tgha') format('truetype'),
+      url('../fonts/icomoon.woff?d0tgha') format('woff'),
+      url('../fonts/icomoon.svg?d0tgha#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -25,6 +25,12 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  .icon-add:before {
+    content: "\e903";
+  }
+  .icon-whatsapp:before {
+    content: "\ea93";
+  }
   .icon-edit:before {
     content: "\e900";
   }
@@ -35,18 +41,29 @@
   .icon-email:before {
     content: "\e902";
   }
+  .icon-emoji-happy:before {
+    content: "\e904";
+  }
   .icon-envelope-o:before {
     content: "\f003";
+  }
+  .icon-check:before {
+    content: "\f00c";
   }
   .icon-phone:before {
     content: "\f095";
   }
+  .icon-group:before {
+    content: "\f0c0";
+  }
+  .icon-users:before {
+    content: "\f0c0";
+  }
   .icon-user-o:before {
     content: "\f2c0";
   }
-  .icon-whatsapp:before {
-    content: "\ea93";
-  }
+  
+  
   
   
 $primaryBgColor: #d72720;
@@ -86,6 +103,7 @@ body{
     font: 16px Helvetica,Arial,sans-serif;
     max-width: 1920px;
     min-width: 320px;
+    line-height: 1.9;
     color: #7a7a7a;
 }
 
@@ -116,7 +134,7 @@ body{
         height: 48px;
         background-color: $submitColor;
         border-radius: 50%;
-        padding: 11px;
+        padding: 1px 11px;
         transition: all .3s;
         cursor: pointer;
         &:hover {
@@ -303,16 +321,94 @@ body{
 }
 //whoWeAre
 .whoWeAre {
+    background-color: #f4f4f4;
+    padding: 70px 0;
 }
 .whoWeAre__box {
-}
-.whoWeAre__left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 .whoWeAre__title {
+    @include title();
 }
 .whoWeAre__descr {
+    margin: 16px 0;
 }
-.whoWeAre__right {
+//benefits
+.benefits {
+    background-image: url(../img/grid.png);
+    padding: 70px 0px;
 }
-.whoWeAre__img {
+.benefits__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+}
+.benefits__img,
+.benefits__img2,
+.benefits__img3,
+.benefits__img4 {
+    position: relative;
+    height: 68px;
+    width: 68px;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: $primaryBgColor;
+    &::before {
+        content: "\e903";
+        font-family: 'icomoon';
+        position: absolute;
+        color: #fff;
+        font-size: 50px;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.benefits__img2::before {
+    content: "\f00c";
+    font-family: 'icomoon';
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.benefits__img3::before {
+    content: "\e904";
+    font-family: 'icomoon';
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    left: 23%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.benefits__img4::before {
+    content: "\f0c0";
+    font-family: 'icomoon';
+    position: absolute;
+    color: #fff;
+    font-size: 34px;
+    left: 22%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.benefits__title {
+    line-height: 1.3;
+    font-weight: 700;
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+}
+.benefits__descr {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #afb6bf;
+    margin: 14px 0;
 }
