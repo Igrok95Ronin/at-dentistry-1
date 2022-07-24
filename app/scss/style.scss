@@ -53,6 +53,14 @@ $primaryBgColor: #d72720;
 $footerBgColor: #e73332;
 $submitColor: #003349;
 
+@mixin title {
+    font-size: 35px;
+    text-align: center;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 29px;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -166,7 +174,7 @@ body{
     padding: 67px 0px 52px;
 }
 .clinic__left {
-    margin-top: 35px;
+    margin-top: 30px;
 }
 .clinic__title {
     font-size: 32px;
@@ -257,4 +265,54 @@ body{
         color: #fff;
         background-color: #011a24;
     }
+}
+//whatWeDo
+.whatWeDo {
+    padding: 70px 0;
+}
+.whatWeDo__title {
+    @include title();
+}
+.whatWeDo__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.whatWeDo__img {
+    max-width: 320px;
+    max-height: 223px;
+}
+.whatWeDo__name {
+    font-weight: 700;
+    font-size: 21px;
+    margin: 12px 0px 0px;
+    padding: 0px 0px 0px 7px;
+}
+.whatWeDo__descr {
+    font-size: 12pt;
+    font-weight: 200;
+    line-height: 1.9;
+    margin: 16px 0px;
+    padding: 0px 0px 0px 7px;
+}
+.btn-center {
+    text-align: center;
+}
+.btnn--center {
+    text-align: left;
+}
+//whoWeAre
+.whoWeAre {
+}
+.whoWeAre__box {
+}
+.whoWeAre__left {
+}
+.whoWeAre__title {
+}
+.whoWeAre__descr {
+}
+.whoWeAre__right {
+}
+.whoWeAre__img {
 }
