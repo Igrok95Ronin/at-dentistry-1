@@ -299,6 +299,7 @@ body{
 .whatWeDo__img {
     max-width: 320px;
     max-height: 223px;
+    width: 100%;
 }
 .whatWeDo__name {
     font-weight: 700;
@@ -411,4 +412,86 @@ body{
     line-height: 1.5;
     color: #afb6bf;
     margin: 14px 0;
+}
+//plan
+.plan {
+    background: linear-gradient(180deg,rgba(255,255,255,1) 54%,rgba(235,235,235,1) 100%);
+    box-shadow: 1px 7px 19px #dadada;
+    padding: 70px 0;
+}
+.plan__title {
+    @include title();
+}
+.plan__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.plan__item {
+    position: relative;
+        &:nth-child(1)::before,
+        &:nth-child(2)::before,
+        &:nth-child(3)::before,
+        &:nth-child(4)::before
+         {
+        content: '1';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        right: 20px;
+        background-color: red;
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        z-index: 100;
+    }
+    &:nth-child(2)::before {
+        content: '2';
+    }
+    &:nth-child(3)::before {
+        content: '3';
+    }
+    &:nth-child(4)::before {
+        content: '4';
+    }
+}
+.plan__img {
+    max-width: 320px;
+    max-height: 223px;
+    position: relative;
+    width: 100%;
+}
+.plan__name {
+    font-weight: 700;
+    font-size: 21px;
+    padding: 0 0 0 7px;
+    margin: 12px 0 0;
+}
+.plan__descr {
+    font-weight: 200;
+    line-height: 1.9;
+    padding: 0 0 0 7px;
+    margin: 16px 0;
+}
+.plan__bottom {
+    margin: 20px auto auto;
+    border-top: 7px solid #f13e3e;
+    max-width: 600px;
+    text-align: center;
+    padding-top: 17px;
+}
+.plan__name-bottom {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0;
+    color: #333333;
+}
+.plan__descr-bottom {
+    color: #333333;
+    margin: 0;
+}
+.btnn--margin {
+    margin: 0;
 }
