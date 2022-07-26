@@ -182,7 +182,7 @@ body{
 }
 //clinic
 .clinic {
-    background: url(../img/slider-beg.jpg) 0 0/cover fixed;
+    background: url(../img/slider-beg-min.jpg) 0 0/cover fixed;
     background-repeat: no-repeat;
     transition: all 1s;
 }
@@ -342,7 +342,7 @@ body{
 }
 //benefits
 .benefits {
-    background-image: url(../img/grid.png);
+    background-image: url(../img/grid-min.png);
     padding: 70px 0px;
 }
 .benefits__items {
@@ -619,7 +619,7 @@ body{
         }
     }
     .swiper-button-next, .swiper-button-prev {
-        top: 41%;
+        top: 49% !important;
     }
 }
 @media(max-width: 375px) {
@@ -627,8 +627,5 @@ body{
         img {
             max-width: 250px;
         }
-    }
-    .swiper-button-next, .swiper-button-prev {
-        top: 33%;
     }
 }
