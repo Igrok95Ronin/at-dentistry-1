@@ -22,6 +22,8 @@ $title = $text . ' ' . $city;
     <title>
         <?= $title ?>
     </title>
+
+
 </head>
 
 <body>
@@ -50,7 +52,7 @@ $title = $text . ' ' . $city;
             </div>
         </div>
     </header>
-    <main class="main">
+   <main class="main">
         <section class="clinic">
             <div class="container-fluid">
                 <div class="row">
@@ -61,7 +63,7 @@ $title = $text . ' ' . $city;
                                 <p class="clinic__descr">Turkey's most prosperous and reputable hospitals in cosmetic
                                     dentistry. Providing a wide range of dental procedures; such as, Teeth whitening,
                                     Veneers, smile makeovers, bridge contouring etc …….</p>
-                                <a class="btnn" href="#">Contact Us</a>
+                                <a class="btnn" href="#"><span>Contact Us</span></a>
                             </div>
                             <div class="clinic__right">
                                 <h2 class="clinic__form-title">Contact our specialist for immediate free diagnosis</h2>
@@ -94,7 +96,7 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-        <section class="whatWeDo">
+    <section class="whatWeDo">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
@@ -131,7 +133,7 @@ $title = $text . ' ' . $city;
                                 </div>
                             </div>
                             <div class="btn-center">
-                                <a class="btnn btnn--center" href="#">Contact Us</a>
+                                <a class="btnn " href="#"><span>Contact Us</span></a>
                             </div>
                         </div>
                     </div>
@@ -209,61 +211,123 @@ $title = $text . ' ' . $city;
                         <h2 class="plan__title">Your Medical Trip Plan</h2>
                         <div class="plan__items">
                             <div class="plan__item">
-                                <img class="plan__img" src="assets/img/1transportation.jpg" alt="" >
+                                <img class="plan__img" src="assets/img/1transportation.jpg" alt="">
                                 <p class="plan__name">TRANSPORTATION</p>
-                                <p class="plan__descr">Welcome! Upon your arrival to Istanbul, Your private driver will pick you up at the airport, he will be responsible of your transportation between the airport, hotel and the hospital.</p>
+                                <p class="plan__descr">Welcome! Upon your arrival to Istanbul, Your private driver will
+                                    pick you up at the airport, he will be responsible of your transportation between
+                                    the airport, hotel and the hospital.</p>
                             </div>
                             <div class="plan__item">
-                                <img class="plan__img" src="assets/img/2planning.jpg" alt="" >
+                                <img class="plan__img" src="assets/img/2planning.jpg" alt="">
                                 <p class="plan__name">PLANNING</p>
                                 <p class="plan__descr">Everything is perfectly pre-planned!
-                                    Your companion translator will guide you through the everyday details, and will do all the logistics for you in order to ensure your comfort.</p>
+                                    Your companion translator will guide you through the everyday details, and will do
+                                    all the logistics for you in order to ensure your comfort.</p>
                             </div>
                             <div class="plan__item">
-                                <img class="plan__img" src="assets/img/3accommodation.jpg" alt="" >
+                                <img class="plan__img" src="assets/img/3accommodation.jpg" alt="">
                                 <p class="plan__name">ACCOMMODATION</p>
                                 <p class="plan__descr">Your accommodation is pre-booked!
                                     Your consultant will provide you with a variety of luxurious Hotels to pick from...
                                     And It is FREE !</p>
                             </div>
                             <div class="plan__item">
-                                <img class="plan__img" src="assets/img/4consultancy.jpg" alt="" >
+                                <img class="plan__img" src="assets/img/4consultancy.jpg" alt="">
                                 <p class="plan__name">AFTERCARE</p>
                                 <p class="plan__descr">We are just starting, but never ending!
-                                    Our medical team will be in your service for a lifetime, you will have continuous follow-up and will answer all your questions and requests!</p>
+                                    Our medical team will be in your service for a lifetime, you will have continuous
+                                    follow-up and will answer all your questions and requests!</p>
                             </div>
                         </div>
                         <div class="plan__bottom">
                             <p class="plan__name-bottom">ARRANGE YOUR TRAVEL PLAN</p>
                             <p class="plan__descr-bottom">Our Specialist Will Help You</p>
                             <div class="btn-center">
-                                <a class="btnn btnn--center btnn--margin" href="#">Contact Us</a>
+                                <a class="btnn btnn--margin" href="#"><span> Contact Us</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="beforeAfter">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 container">
+                        <div class="beforeAfter__box">
+                            <h2 class="beforeAfter__title">BEFORE & AFTER</h2>
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="assets/img/01.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="assets/img/02.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="assets/img/03.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="assets/img/04.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="assets/img/05.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="assets/img/06.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="assets/img/07.jpg" alt=""></div>
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="forms">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 container">
+                        <div class="forms__box">
+                            <h2 class="forms__title">Kontaktieren Sie uns:</h2>
+                              <form id="jq_form" class="mt-5">
+                                <div class="my-3">
+                                    <input class="form-control" placeholder="Vorname" name="jq_name" type="text">
+                                    <div id="jq_name" style="font-weight:700;font-size:15px;color:red;padding-top:2px;display:none">Dies ist ein Pflichtfeld.</div>
+                                </div>
+                                <div class="my-4">
+                                    <input class="form-control" placeholder="Telefon" name="jq_phone" type="text">
+                                    <div id="jq_phone" style="font-weight:700;font-size:15px;color:red;padding-top:2px;display:none">Dies ist ein Pflichtfeld.</div>
+                                </div>
+                                <div class="my-4">
+                                    <input class="form-control" placeholder="Straße" name="jq_street" type="text">
+                                </div>
+                                <div class="my-4">
+                                    <input class="form-control" placeholder="PLZ / Ort" name="jq_city" type="text">
+                                </div>
+                                <div class="my-4">
+                                    <input class="form-control" placeholder="E-Mail" name="jq_email" type="text">
+                                </div>
+                                <div class="my-4">
+                                    <textarea rows="3" class="form-control textarea-height" name="jq_text" placeholder="Nachricht"></textarea>
+                                    <div id="jq_text" style="font-weight:700;font-size:15px;color:red;padding-top:2px;display:none">Dies ist ein Pflichtfeld.</div>
+                                </div>
+                                <div>
+                                    <input class="btn  text-uppercase fw-bold mb-5 px-3 py-2 forms__button" type="submit" id="jq_submit" value="Senden">
+                                </div>
+                                <div id="jq_success" style="display:none">Vielen Dank für deine Nachricht. Sie wurde
+                                    gesendet.</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <!--Нижний колонтитул страницы-->
     <footer class="footer">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 container">footer</div>
-            </div>
-        </div>
-        <!-- Навигационные ссылки -->
-        <nav class="footer-nav">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 container">...</div>
+                <div class="col-12 container">
+                    © Copyright 2022
                 </div>
             </div>
-        </nav>
+        </div>
     </footer>
     <!--Style-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/1.css" rel="stylesheet">
     <link href="assets/css/style.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/js/main.min.js"></script>
 </body>
 

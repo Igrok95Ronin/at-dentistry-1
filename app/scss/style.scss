@@ -71,7 +71,7 @@ $footerBgColor: #e73332;
 $submitColor: #003349;
 
 @mixin title {
-    font-size: 35px;
+    font-size: clamp(30px,4vw,35px);
     text-align: center;
     font-weight: 700;
     color: #333333;
@@ -183,6 +183,8 @@ body{
 //clinic
 .clinic {
     background: url(../img/slider-beg.jpg) 0 0/cover fixed;
+    background-repeat: no-repeat;
+    transition: all 1s;
 }
 .clinic__box {
     color: #fff;
@@ -195,7 +197,7 @@ body{
     margin-top: 30px;
 }
 .clinic__title {
-    font-size: 32px;
+    font-size: clamp(26px,4vw,32px);
     font-weight: 700;
     margin: 21.44px 0;
 }
@@ -204,9 +206,10 @@ body{
     font-weight: 700;
     color: #fff;
     margin: 27px 0px 0px;
-    padding: 13px 13px 13px 35px;
+    padding: 13px 45px 13px 13px;;
     max-width: 210px;
     width: 100%;
+    text-align: center;
     border-radius: 77px;
     line-height: 39px;
     background-color: $primaryBgColor;
@@ -216,11 +219,14 @@ body{
         color: #fff;
         background-color: $submitColor;
     }
-    &::before {
+    span {
+        position: relative;
+    }
+    span::before {
         position: absolute;
         content: "\ea93";
         font-family: 'icomoon';
-        right: 50px;
+        right: -33px;
     }
 }
 .clinic__right {
@@ -297,8 +303,6 @@ body{
     gap: 20px;
 }
 .whatWeDo__img {
-    max-width: 320px;
-    max-height: 223px;
     width: 100%;
 }
 .whatWeDo__name {
@@ -458,8 +462,6 @@ body{
     }
 }
 .plan__img {
-    max-width: 320px;
-    max-height: 223px;
     position: relative;
     width: 100%;
 }
@@ -494,4 +496,139 @@ body{
 }
 .btnn--margin {
     margin: 0;
+}
+//beforeAfter
+.swiper {
+    max-width: 1210px;
+    max-height: 375px;
+    text-align: center
+  }
+.beforeAfter {
+    padding: 70px 0;
+}
+.beforeAfter__title {
+    @include title();
+    font-weight: 700;
+}
+//forms
+.forms {
+    background-color: $primaryBgColor;
+    padding: 70px 0 0;
+}
+.forms .container {
+    border-bottom: 1px solid #fff;
+}
+.forms__title {
+    @include title();
+    color: #fff;
+}
+.textarea-height {
+    min-height: 100px !important;
+    resize: none;
+}
+//footer
+.footer {
+    background-color: $primaryBgColor;
+    color: #fff;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+
+//Mobile
+@media(max-width: 1200px) {
+    .clinic__form-title {
+        font-size: 20px;
+    }
+    .benefits__items {
+        gap: 20px;
+    }
+}
+@media(max-width: 991px) {
+    .clinic__box {
+        grid-template-columns: 1fr;
+        padding: 0px 0 52px;
+    }
+    .whatWeDo__items {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .whoWeAre__box {
+        grid-template-columns: 1fr;
+    }
+    .whoWeAre__right {
+        text-align: center;
+    }
+    .benefits__items {
+        grid-template-columns: repeat(2,1fr);
+        gap: 60px;
+    }
+    .plan__items {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width: 767px) {
+    .header {
+        display: none;
+    }
+    .clinic__right {
+        padding: 20px 15px 5px;
+    }
+    .clinic {
+        background-position: 37%;
+        transition: all 1s;
+    }
+    .benefits__items {
+        gap: 30px;
+    }
+}
+@media(max-width: 574px) {
+    .whatWeDo__items,
+    .plan__items {
+        grid-template-columns: 1fr;
+    }
+    .whoWeAre__right {
+        img {
+            width: 100%;
+        }
+    }
+    .benefits__items {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+@media(max-width: 425px) {
+    .btnn {
+        max-width: none;
+    }
+    .forms__button {
+        width: 100%;
+    }
+    .clinic__title {
+        margin: 0 0 21.44px;
+    }
+    .whatWeDo,
+    .whoWeAre,
+    .benefits,
+    .plan,
+    .beforeAfter {
+        padding: 40px 0;
+    }
+    .swiper-slide {
+        img {
+            max-width: 300px;
+        }
+    }
+    .swiper-button-next, .swiper-button-prev {
+        top: 41%;
+    }
+}
+@media(max-width: 375px) {
+    .swiper-slide {
+        img {
+            max-width: 250px;
+        }
+    }
+    .swiper-button-next, .swiper-button-prev {
+        top: 33%;
+    }
 }
